@@ -4,4 +4,26 @@
   margin: 0;
 }
 
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+header, footer {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+header .container, footer .container {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */

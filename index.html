@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentum</title>
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
-    <div class="links">Links</div>
-    <div class="search">Search</div>
-    <div class="weather">Weather</div>
+    <div class="container">
+      <div class="links">Links</div>
+      <div class="search">Search</div>
+    </div>
+    <div class="container">
+      <div class="audio-player">Player</div>
+      <div class="weather">Weather</div>
+    </div>
   </header>
 
   <main>
@@ -26,11 +32,21 @@
   </main>
 
   <footer>
-    <div class="properties">P</div>
-    <div class="place">Germany, Gamburg</div>
-    <div class="quote">quote quote quote</div>
-    <div class="todo">Todo</div>
+    <div class="container">
+      <div class="properties">
+        <i class="fa fa-gear"></i>
+      </div>
+      <div class="place">Germany, Gamburg</div>
+    </div>
+
+    <div class="container quote">
+      <h5 class="quote__content">quote</h5>
+      <h6 class="quote__author">author</h6>
+    </div>
+
+    <div class="container todo">Todo</div>
   </footer>
+
   <script src="dist/main.js"></script>
   <!--script src="src/index.js"></!--script-->
 </body>

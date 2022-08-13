@@ -1,1 +1,3 @@
-console.log("Starting")
+window.onload = function() {
+  console.log("Hello")
+}

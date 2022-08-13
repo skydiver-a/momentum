@@ -4,6 +4,10 @@ window.onload = function() {
   setInterval(getClock, 1000);
 
   getCalendar();
+
+  showGreeting();
+
+  getName();
 }
 
 const getClock = () => {
@@ -27,3 +31,17 @@ const getCalendar = () => {
   const day = today.getDay();
   calendar.innerText = `${week[day]}, ${months[month]} ${date}, ${year}`;
 };
+
+const showGreeting = () => {
+  const greeting = document.querySelector(".greeting");
+  let hour = new Date().getHours();
+  if (hour < 12 ) {
+    greeting.innerText = `Good morning. `;
+  } else if (hour < 18) {
+    greeting.innerText = `Good afternoon, `;
+  } else {
+    greeting.innerText = `Good evening, `;
+  }
+};
+
+const getName = () => {};

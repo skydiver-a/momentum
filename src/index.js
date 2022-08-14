@@ -1,11 +1,11 @@
 import { Clock } from './js/Clock';
 
 window.onload = function() {
-  setInterval(getClock, 1000);
-
-  getCalendar();
-
-  showGreeting();
+  setInterval(() => {
+    getClock();
+    getCalendar();
+    showGreeting();
+  }, 1000);
 
   getName();
 }

@@ -7,7 +7,7 @@ window.onload = function() {
     showGreeting();
   }, 1000);
 
-  getName();
+  addEnterNameClickHandler();
 }
 
 const getClock = () => {
@@ -33,7 +33,7 @@ const getCalendar = () => {
 };
 
 const showGreeting = () => {
-  const greeting = document.querySelector(".greeting");
+  const greeting = document.querySelector(".greeting-content");
   let hour = Math.floor((new Date().getHours()) / 6);
   let part = '';
   switch (hour) {
@@ -55,4 +55,36 @@ const showGreeting = () => {
   greeting.innerText = `Good ${part}, `;
 };
 
-const getName = () => {};
+const addEnterNameClickHandler = () => {
+  const form = document.forms.name;
+  const input = form.elements.user;
+  input.addEventListener("blur", () => {
+    resizeInput(input);
+    setLocalStorage('name', input.value);
+  });
+};
+
+const resizeInput = (input) => {
+  input.style.width = input.value.length + "ch";
+};
+
+const setLocalStorage = (key, value) => {
+  localStorage.setItem(key, value);
+};
+
+const getLocalStorage = () => {
+  if (localStorage.getItem('name')) {
+    const inputValue = localStorage.getItem('name');
+    getName(inputValue);
+    console.log(inputValue);
+  }
+};
+
+const getName = (inputValue) => {
+  const form = document.forms.name;
+  const input = form.elements.user;
+  input.value = inputValue;
+  resizeInput(input);
+};
+
+window.addEventListener('load', getLocalStorage);

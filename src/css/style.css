@@ -45,7 +45,7 @@ main .clock {
 }
 
 .calendar {
-  margin-top: 53vh;
+  margin-top: 52vh;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -84,11 +84,37 @@ main .clock {
   font-size: 3.5rem;
   line-height: 0.8;
 }
-.greeting form input[type=text]:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-image: none !important;
+
+.focus {
+  margin-top: 4vh;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1;
+}
+.focus form input[type=text] {
+  border: none;
+  outline: none;
   background-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
   color: #FFFFFF;
+  width: 18ch;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+.focus form input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,14 +34,25 @@ const getCalendar = () => {
 
 const showGreeting = () => {
   const greeting = document.querySelector(".greeting");
-  let hour = new Date().getHours();
-  if (hour < 12 ) {
-    greeting.innerText = `Good morning. `;
-  } else if (hour < 18) {
-    greeting.innerText = `Good afternoon, `;
-  } else {
-    greeting.innerText = `Good evening, `;
+  let hour = Math.floor((new Date().getHours()) / 6);
+  let part = '';
+  switch (hour) {
+    case 0:
+      part = "night";
+      break;
+    case 1:
+      part = "morning";
+      break;
+    case 2:
+      part = "afternoon";
+      break;
+    case 3:
+      part = "evening";
+      break;
+    default:
+      break;
   }
+  greeting.innerText = `Good ${part}, `;
 };
 
 const getName = () => {};

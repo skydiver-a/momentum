@@ -40,6 +40,7 @@ main .clock {
 }
 
 .calendar {
+  margin-top: 15rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -48,6 +49,7 @@ main .clock {
 }
 
 .greeting {
+  margin-top: 13rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;

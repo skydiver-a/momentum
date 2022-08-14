@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 header, footer {
   height: 5vh;
   display: flex;
@@ -22,13 +27,13 @@ main {
 }
 main .clock {
   position: absolute;
-  top: 0;
+  top: -10vh;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
   width: 900px;
-  height: 224px;
+  height: 200px;
 }
 
 .clock {
@@ -40,7 +45,7 @@ main .clock {
 }
 
 .calendar {
-  margin-top: 15rem;
+  margin-top: 53vh;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -49,12 +54,41 @@ main .clock {
 }
 
 .greeting {
-  margin-top: 13rem;
+  margin: 0 auto;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 4rem;
   line-height: 0.8;
+}
+.greeting form {
+  display: inline-block;
+}
+.greeting form input[type=text] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 0.8;
+  color: #FFFFFF;
+  width: 9.5ch;
+}
+.greeting form input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 0.8;
+}
+.greeting form input[type=text]:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */

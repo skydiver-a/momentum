@@ -8,6 +8,8 @@ window.onload = function() {
   }, 1000);
 
   addEnterNameClickHandler();
+
+  addFocusClickHandler();
 }
 
 const getClock = () => {
@@ -58,14 +60,29 @@ const showGreeting = () => {
 const addEnterNameClickHandler = () => {
   const form = document.forms.name;
   const input = form.elements.user;
+  const defaultValue = "[enter name]";
   input.addEventListener("blur", () => {
-    resizeInput(input);
+    resizeInput(input, defaultValue);
     setLocalStorage('name', input.value);
   });
 };
 
-const resizeInput = (input) => {
-  input.style.width = input.value.length + "ch";
+const addFocusClickHandler = () => {
+  const form = document.forms.focus;
+  const input = form.elements.focusTodo;
+  const defaultValue = "[write your focus here]";
+  input.addEventListener('blur', () => {
+    resizeInput(input, defaultValue);
+    setLocalStorage('focus', input.value);
+  });
+};
+
+const resizeInput = (input, defaultValue) => {
+  if (input.value.length > 0) {
+    input.style.width = input.value.length + .7 + "ch";
+  } else {
+    input.style.width = defaultValue.length - 2.5 + "ch";
+  }
 };
 
 const setLocalStorage = (key, value) => {
@@ -76,7 +93,10 @@ const getLocalStorage = () => {
   if (localStorage.getItem('name')) {
     const inputValue = localStorage.getItem('name');
     getName(inputValue);
-    console.log(inputValue);
+  }
+  if (localStorage.getItem('focus')) {
+    const inputValue = localStorage.getItem('focus');
+    getFocus(inputValue);
   }
 };
 
@@ -87,4 +107,12 @@ const getName = (inputValue) => {
   resizeInput(input);
 };
 
+const getFocus = (inputValue) => {
+  const form = document.forms.focus;
+  const input = form.elements.focusTodo;
+  input.value = inputValue;
+  resizeInput(input);
+};
+
 window.addEventListener('load', getLocalStorage);
+

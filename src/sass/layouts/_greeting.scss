@@ -1,0 +1,21 @@
+.greeting {
+  margin: 0 auto;
+  @include font("Poppins", normal, 600, 3.375rem, 1);
+
+  form {
+    display: inline-block;
+    & input[type="text"] {
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      @include font("Poppins", normal, 600, 3.375rem, 1);
+      color: $color-light;
+      width: 9.5ch;
+      &::placeholder {
+        color: rgba(255, 255, 255, .8);
+        @include font("Poppins", normal, 600, 3.375rem, 1);
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .greeting {
-  margin: 0 auto;
-  @include font("Poppins", normal, 600, 3.375rem, 1);
+  margin-top: -1rem;
+  @include font("Poppins", normal, 400, 3.375rem, 1);
 
   form {
     display: inline-block;
@@ -9,12 +9,12 @@
       outline: none;
       background-color: transparent;
 
-      @include font("Poppins", normal, 600, 3.375rem, 1);
+      @include font("Poppins", normal, 400, 3.375rem, 1);
       color: $color-light;
-      width: 9.5ch;
+      width: 10.5ch;
       &::placeholder {
         color: rgba(255, 255, 255, .8);
-        @include font("Poppins", normal, 600, 3.375rem, 1);
+        @include font("Poppins", normal, 400, 3.375rem, 1);
       }
     }
   }

@@ -6,25 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentum</title>
   <link rel="icon" type="image/png" href="src/assets/icon/favicon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script defer src="script.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
   <header>
-    <div class="container">
-      <div class="links">Links</div>
-      <div class="search">Search</div>
-    </div>
-    <div class="container">
-      <div class="audio-player">Player</div>
-      <div class="weather">Weather</div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="links">Links</div>
+        <div class="search">Search</div>
+      </div>
+      <div class="container">
+        <div class="audio-player">Player</div>
+        <div class="weather">Weather</div>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="calendar"></div>
+    <div class="calendar">
+      <span></span>
+    </div>
     <div class="clock"></div>
     <div class="greeting">
       <span class="greeting-content"></span>
@@ -39,22 +42,23 @@
         <input type="text" name="focusTodo" class="focus-todo" placeholder="[write your focus here]">
       </form>
     </div>
+
+    <div class="quote">
+      <span class="quote__content">The greatest glory in living lies not in never falling, but in rising every time we fall.</span>
+      <span class="quote__author">- Nelson Mandela</span>
+    </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="properties">
-        <i class="fa fa-gear"></i>
+    <div class="wrapper">
+      <div class="container">
+        <div class="properties">
+          <i class="fa fa-gear"></i>
+        </div>
+        <div class="place">Germany, Gamburg</div>
       </div>
-      <div class="place">Germany, Gamburg</div>
+      <div class="container todo">Todo</div>
     </div>
-
-    <div class="container quote">
-      <h5 class="quote__content">quote</h5>
-      <h6 class="quote__author">author</h6>
-    </div>
-
-    <div class="container todo">Todo</div>
   </footer>
 
 

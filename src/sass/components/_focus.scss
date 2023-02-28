@@ -1,22 +1,21 @@
 .focus {
-
+  margin-top: 4.7rem;
   text-align: center;
-  @include font("Poppins", normal, 400, 3rem, 1);
+  @include font("Poppins", normal, 400, 2.15rem, 1);
 
   form {
-
     & input[type="text"] {
       border: none;
       outline: none;
       background-color: transparent;
 
-      @include font("Poppins", normal, 600, 3rem, 1);
+      @include font("Poppins", normal, 400, 2rem, 1);
       text-align: center;
       color: $color-light;
-      width: 18ch;
+      width: 27ch;
       &::placeholder {
         color: rgba(255, 255, 255, .8);
-        @include font("Poppins", normal, 600, 2.8rem, .8);
+        @include font("Poppins", normal, 400, 2rem, .8);
       }
       border-bottom: 2px solid rgba(255, 255, 255, .8);
     }

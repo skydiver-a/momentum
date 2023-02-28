@@ -1,0 +1,6 @@
+.clock {
+  width: 37rem;
+  height: 10rem;
+  margin-top: .5rem;
+  @include font("Poppins", normal, 400, 10rem, 1);
+}

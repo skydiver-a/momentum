@@ -5,17 +5,21 @@
 }
 
 body {
+  width: 100vw;
   background-color: #000000;
   color: #FFFFFF;
 }
 
-header, footer {
+.wrapper {
+  width: 98%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-header .container, footer .container {
+.wrapper .container {
   display: flex;
   gap: 1rem;
+  margin: 1rem 0;
 }
 
 main {
@@ -23,38 +27,32 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main .clock {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 700px;
-  height: 150px;
-}
-
-.clock {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 10rem;
-  line-height: 1;
-}
 
 .calendar {
+  margin-top: 18rem;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
 }
 
-.greeting {
-  margin: 0 auto;
+.clock {
+  width: 37rem;
+  height: 10rem;
+  margin-top: 0.5rem;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 1;
+}
+
+.greeting {
+  margin-top: -1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 1;
 }
@@ -67,27 +65,28 @@ main .clock {
   background-color: transparent;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 1;
   color: #FFFFFF;
-  width: 9.5ch;
+  width: 10.5ch;
 }
 .greeting form input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 1;
 }
 
 .focus {
+  margin-top: 4.7rem;
   text-align: center;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.15rem;
   line-height: 1;
 }
 .focus form input[type=text] {
@@ -96,21 +95,36 @@ main .clock {
   background-color: transparent;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 3rem;
+  font-weight: 400;
+  font-size: 2rem;
   line-height: 1;
   text-align: center;
   color: #FFFFFF;
-  width: 18ch;
+  width: 27ch;
   border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 .focus form input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 2.8rem;
+  font-weight: 400;
+  font-size: 2rem;
   line-height: 0.8;
+}
+
+.quote {
+  margin-top: 6.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quote span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

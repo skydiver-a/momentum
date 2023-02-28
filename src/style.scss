@@ -3,8 +3,12 @@
 
 @import "sass/base/base";
 
+@import "sass/components/calendar";
+@import "sass/components/clock";
+@import "sass/components/greeting";
+@import "sass/components/focus";
+@import "sass/components/quote";
+
 @import "sass/layouts/slider";
-@import "sass/layouts/clock";
-@import "sass/layouts/calendar";
-@import "sass/layouts/greeting";
-@import "sass/layouts/focus";
+//@import "sass/layouts/focus";
+//@import "sass/layouts/focus";

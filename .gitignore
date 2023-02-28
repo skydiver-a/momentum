@@ -1,4 +1,5 @@
 node_modules/
+pixel_perfect/
 package-lock.json
 package.json
 webpack.config.js

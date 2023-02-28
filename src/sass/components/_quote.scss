@@ -1,0 +1,13 @@
+.quote {
+  margin-top: 6.7rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    @include font("Poppins", normal, 300, 1.2rem, 1);
+  }
+
+}

@@ -23,7 +23,7 @@ const getCalendar = () => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
           week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  const calendar = document.querySelector(".calendar");
+  const calendar = document.querySelector(".calendar span");
   const today = new Date();
   const year = String(today.getFullYear());
   const month = today.getMonth();

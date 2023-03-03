@@ -6,17 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentum</title>
   <link rel="icon" type="image/png" href="src/assets/icon/favicon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d8d17af379.js" crossorigin="anonymous"></script>
+  
 <script defer src="script.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
   <header>
     <div class="wrapper">
       <div class="container">
         <div class="links">Links</div>
-        <div class="search">Search</div>
+        <form class="search-container" action="http://google.com/search" target="_blank">
+          <input id="search-box" type="text" class="search-box" name="q" autocomplete="off" placeholder="Search..."/>
+          <label for="search-box"><i class="fas fa-search search-icon" aria-hidden="true"></i></label>
+          <input type="submit" id="search-submit" />
+        </form>
       </div>
       <div class="container">
         <div class="audio-player">Player</div>
@@ -45,8 +50,8 @@
     </div>
 
     <div class="quote">
-      <span class="quote__content">The greatest glory in living lies not in never falling, but in rising every time we fall.</span>
-      <span class="quote__author">- Nelson Mandela</span>
+      <span class="quote__content"></span>
+      <span class="quote__author"></span>
     </div>
   </main>
 
@@ -62,6 +67,6 @@
     </div>
   </footer>
 
-
+ 
 </body>
 </html>

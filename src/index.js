@@ -1,6 +1,7 @@
 import Calendar from "./js/Calendar.js";
 import Clock from "./js/Clock.js";
 import Greeting from "./js/Greeting.js";
+import Quote from "./js/Quote.js";
 
 window.onload = function() {
   const calendar = new Calendar();
@@ -12,9 +13,14 @@ window.onload = function() {
   const greeting = new Greeting();
   greeting.build();
 
+  const quote = new Quote();
+  quote.build();
+
   addEnterNameClickHandler();
 
   addFocusClickHandler();
+
+  addSearchClickHandler();
 }
 
 const addEnterNameClickHandler = () => {
@@ -43,4 +49,19 @@ const resizeInput = (input, defaultValue) => {
   } else {
     input.style.width = defaultValue.length - 2.5 + "ch";
   }
+};
+
+const addSearchClickHandler = () => {
+  const searchForm = document.querySelector(".search-container")
+
+  searchForm.submit(function(e) {
+    e.preventDefault();
+    searchFrom.reset(); // clear the message box)
+  })/*
+  const submitBtn = document.querySelector("#search-submit");
+
+  submitBtn.addEventListener('click', () => {
+    console.log("submit");
+  })*/
+  document.addEventListener("touchstart", function(){}, true);
 };

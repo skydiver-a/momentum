@@ -1,54 +1,73 @@
-.search-box {
-  transition: width 1s, border-radius 1s, background 1s, box-shadow 1s;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  background: rgb(235, 235, 235);
+.search_form {
+  position: relative;
 
-  & + label .search-icon {
-    color: black;
-  }
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: .2rem;
 
-  &:hover {
-    color: white;
-    background: rgb(200, 200, 200);
-    box-shadow: 0 0 0 5px rgb(61, 71, 82);
-    & + label .search-icon {
-      color: white;
-    }
-  }
+  background-color: white;
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
 
-  &:focus {
-    transition: width 1s cubic-bezier(0,1.22,.66,1.39), border-radius 1s, background 1s;
+  border-radius: 1.2rem;
+  overflow: hidden;  
+  transition: width .5s ease-in-out;
+
+  .search_form__input {
+    border-radius: 1rem;
     border: none;
     outline: none;
-    box-shadow: none;
-    padding-left: 15px;
-    cursor: text;
-    width: 20rem;
-    border-radius: auto;
-    background: rgb(235, 235, 235);
-    color: black;
-    & + label .search-icon {
-      color: black;
+
+    width: calc(100% - 2rem);
+    height: 100%;
+    padding-left: .4rem;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .search_form__btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: .2rem;
+    margin: auto;
+
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+    
+    & > i {
+      font-size: 1.3rem;
+
+      position: absolute;
+      transition: opacity .5s ease-in-out;
+    }
+
+    .search_form__btn-close {
+      opacity: 0;
     }
   }
-  &:not(:focus) {
-    text-indent:-5000px;
-  } // for more-graceful falling back (:not browsers likely support indent)
-}
 
-#search-submit {
-  position: relative;
-  left: -5000px;
-}
-
-.search-icon {
-  position: relative;
-  top: .1rem;
-  left: -1.8rem;
-  color: white;
-  cursor: pointer;
+  &.show {
+    width: 100%;
+    .search_form__input {
+      opacity: 1;
+      pointer-events: initial;
+    }
+    .search_form__btn {
+      .search_form__btn-search {
+        opacity: 0;
+      }
+      .search_form__btn-close {
+        opacity: 1;
+      }
+    }
+  }
 }

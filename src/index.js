@@ -52,16 +52,41 @@ const resizeInput = (input, defaultValue) => {
 };
 
 const addSearchClickHandler = () => {
-  const searchForm = document.querySelector(".search-container")
+  const searchBar = document.querySelector(".search_form"),
+        searchInput = searchBar.querySelector(".search_form__input"),
+        searchButton = document.querySelector(".search_form__btn");
 
-  searchForm.submit(function(e) {
-    e.preventDefault();
-    searchFrom.reset(); // clear the message box)
-  })/*
-  const submitBtn = document.querySelector("#search-submit");
+  const openSearchBar = () => {
+    searchBar.classList.add("show");
+  }
 
-  submitBtn.addEventListener('click', () => {
-    console.log("submit");
-  })*/
-  document.addEventListener("touchstart", function(){}, true);
-};
+  const closeSearchBar = () => {
+    searchBar.classList.remove("show");
+  }
+
+  let searchBarIsClosed = true;
+
+  searchButton.addEventListener("click", () => {
+    if (searchBarIsClosed) {
+      openSearchBar();
+    } else {
+      closeSearchBar();
+    }
+    searchBarIsClosed =!searchBarIsClosed;
+  });
+
+  searchInput.addEventListener("keydown", (event) => {
+    if ((27 === event.which) || (13 === event.which)) {
+        event.preventDefault();
+        let searchString = "http://google.com/search?q=" + searchInput.value;
+        window.open(searchString);
+        //this should delete value from the input
+        event.currentTarget.value = "";
+        closeSearchBar();
+    }
+  });
+
+  window.addEventListener("click", (event) => { 
+    !searchBar.contains(event.target) && closeSearchBar();
+  });
+}

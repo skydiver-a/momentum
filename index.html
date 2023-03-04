@@ -17,11 +17,16 @@
     <div class="wrapper">
       <div class="container">
         <div class="links">Links</div>
-        <form class="search-container" action="http://google.com/search" target="_blank">
-          <input id="search-box" type="text" class="search-box" name="q" autocomplete="off" placeholder="Search..."/>
-          <label for="search-box"><i class="fas fa-search search-icon" aria-hidden="true"></i></label>
-          <input type="submit" id="search-submit" />
-        </form>
+        <div class="search">
+          <form class="search_form" id="search-form" action="https://www.google.com/search" method="POST" target="_blank">
+            <input class="search_form__input" type="text" name="q" placeholder="Search..." autocomplete="off" autofill="off">
+          
+            <div class="search_form__btn" id="search-button">
+              <i class="fas fa-search search_form__btn-search"></i>
+              <i class="fa fa-close search_form__btn-close"></i>
+            </div>
+          </form>
+        </div>
       </div>
       <div class="container">
         <div class="audio-player">Player</div>

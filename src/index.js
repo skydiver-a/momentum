@@ -2,6 +2,7 @@ import Calendar from "./js/Calendar.js";
 import Clock from "./js/Clock.js";
 import Greeting from "./js/Greeting.js";
 import Quote from "./js/Quote.js";
+import Slider from "./js/Slider.js";
 
 window.onload = function() {
   const calendar = new Calendar();
@@ -16,11 +17,16 @@ window.onload = function() {
   const quote = new Quote();
   quote.build();
 
+  const slider = new Slider();
+  slider.build();
+
   addEnterNameClickHandler();
 
   addFocusClickHandler();
 
   addSearchClickHandler();
+
+  addSlideBtnsClickHandler(slider);
 }
 
 const addEnterNameClickHandler = () => {
@@ -88,5 +94,15 @@ const addSearchClickHandler = () => {
 
   window.addEventListener("click", (event) => { 
     !searchBar.contains(event.target) && closeSearchBar();
+  });
+}
+
+const addSlideBtnsClickHandler = (slider) => {
+  const slideBtns = document.querySelectorAll(".slider-btns__circle");
+
+  slideBtns.forEach((slideBtn) => {
+    slideBtn.addEventListener("click", () => {
+      slider.update();
+    });
   });
 }

@@ -1,8 +1,7 @@
 export default class Greeting {
   constructor() {}
 
-  render() {
-    const greeting = document.querySelector(".greeting-content");
+  getPart() {    
     let hour = Math.floor((new Date().getHours()) / 6);
     let part = '';
     switch (hour) {
@@ -21,8 +20,14 @@ export default class Greeting {
       default:
         break;
     }
+    return part;
+  }
+
+  render() {
+    const part = this.getPart();
+    const greeting = document.querySelector(".greeting-content");
     greeting.innerText = `Good ${part}, `;
-}
+  }
 
   build() {
     this.render();
